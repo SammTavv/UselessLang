@@ -134,11 +134,29 @@ Arrays have some handy features to help you not die inside when using them, such
 `cycle through` iterates through the items of an array.
 <pre>
   cycle through MyArray
-  step 1: draw currentItem \\ equivalent of MyArray[i].
+  step 1: draw currentItem \\ equivalent of MyArray[index].
   step 2: draw item 2 \\ equivalent of MyArray[2].
   step 3: throw MyArray.
 </pre>
 You can use keywords like: `currentItem`, `item n`, `firstItem`, `lastItem` and `itemInTheMiddle`.
+
+## Structs and classes
+Classes are for C# low-tier noobs, here we have `house`s.
+<br>A `house` can contain data and functions exactly like a class, but everything must be a piece of furniture or a room.
+<pre>
+  house MyHouse contains number Door and word Bathroom and recipe Window.
+  Door is 20.
+  Bathroom is "TestWord".
+  recipe Window
+  step 1: throw Door.
+</pre>
+Data from a `house` can be accessed with `from`, like the following example:
+<pre>
+  draw Door from MyHouse.
+  draw Carpet from AnotherHouse.
+</pre>
+Notice: anything inside of a `house` can be accessed anywhere, so no more `public`, `private`, `static`, `internal` bullshit.
+<br>Inheritance doesn't exist, sorry **OOP**ers (like me).
 
 ## Imports
 You can import stuff by calling `summon` on the path to a `.usl` script and freely use any of its variable and function.
@@ -146,7 +164,7 @@ You can import stuff by calling `summon` on the path to a `.usl` script and fre
   summon "Path/To/script.usl".
   number MyVariable is Sqrt 25.
 </pre>
-Notice: you can only `summon` a script once, after the program is finished, the file of the script get permanently deleted.
+Notice: you can only `summon` a script once, after the program is done, the file of the script gets permanently deleted.
 
 ## Compiler Status
 The **UselessLang** compiler is very sensitive, so if less than 40% of the lines of code in your program are not treating him nicely, he will get **sad**.
