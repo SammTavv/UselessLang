@@ -51,10 +51,10 @@ A variable can contain multiple words as its name
   &lt;This is my variable&gt; is 10.
 </pre>
 Be careful, every line must end with a `.` symbol.
-<br>Furthermore, you can force variables to avoid certain values:
+<br><br>Furthermore, you can force variables to avoid certain values:
 <pre>
   number MyVariable isn't 5.
-  \\ MyNumber will never be 5, if it is, it'll either skip to 4 or 6
+  \\ MyVariable will never be 5, if it is, it'll either skip to 4 or 6
 </pre>
 And you can also undeclare them by `explode`ing them:
 <pre>
