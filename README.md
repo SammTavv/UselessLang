@@ -194,7 +194,7 @@ The **UselessLang** compiler is very sensitive, so if less than 40% of the lines
 <br>Fun fact: you can feed data to the compiler to boost its happiness.
 <pre>
   word MyVariable is "Nooooo".
-  sacrifice MyVariable. \\ this is the equivalent of "explode MyVariable" but also makes the compiler happy for a small amount of time
+  sacrifice MyVariable. \\ compiler becomes happy but you can't use this variable for a while
 </pre>
 
 ## Bookmarks
