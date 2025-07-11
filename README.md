@@ -117,17 +117,39 @@ Arrays have some handy features to help you not die inside when using them, such
 
 ## Loops
 **UselessLang** has two types of loops: `loop` and `cycle through`.
-<br>Loops are a variation of `recipe`s as their body is the same, except you can't call or add parameters to them, duh.
+<br>Loops are a variation of `recipe`s as they read through steps and have parameters, but you obviously can't call them, duh.
 
 ### loop
-`loop` statements can either be `loop until` or `loop forever`.
+`loop` statements can either be `loop until`, `loop forever` or `loop never`
 <br>`loop until` runs every frame until a condition is met.
 <pre>
   loop until Apples is morethan 50
   step 1: Apples is Apples plus 2.
   step 2: throw Apples. \\ returning a value does nothing in loops by the way, it's just there because it looks cool
 </pre>
-I probably don't even have to explain what `loop forever` does.
+`loop forever` runs every frame forever, even after you close the program.
+`loop never`, well, never runs.
 
 ### cycle through
+`cycle through` iterates through the items of an array.
+<pre>
+  cycle through MyArray
+  step 1: draw currentItem \\ equivalent of MyArray[i].
+  step 2: draw item 2 \\ equivalent of MyArray[2].
+  step 3: throw MyArray.
+</pre>
+You can use keywords like: `currentItem`, `item n`, `firstItem`, `lastItem` and `itemInTheMiddle`.
 
+## Imports
+You can import stuff by calling `summon` on the path to a `.usl` script and freely use any of its variable and function.
+<pre>
+  summon "Path/To/script.usl".
+  number MyVariable is Sqrt 25.
+</pre>
+Notice: you can only `summon` a script once, after the program is finished, the file of the script get permanently deleted.
+
+## Compiler Status
+The **UselessLang** compiler is very sensitive, so if less than 40% of the lines of code in your program are not treating him nicely, he will get **sad**.
+<br>A sad compiler can randomly skip lines of code and not execute them.
+<br>Also, every program must end with the phrase "I've finished writing my code, can you compile it for me please?".
+<br>Notice: you can check if the compiler is happy or not with the special `areYouHappy` keyword, if it returns true, the compiler is happy.
