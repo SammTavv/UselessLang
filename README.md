@@ -103,3 +103,6 @@ You can also chain conditional statements like so:
   -SomeFunction
   else
 </pre>
+
+## Loops
+**
