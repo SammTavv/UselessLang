@@ -21,6 +21,7 @@ In **UselessLang** there are a few types that can be typed to uhhh code, i guess
 `word` is a string that CAN'T contain spaces.
 <br>`longword` is a string that CAN contain spaces.
 <br>`shortword` is a single character.
+<br>Notice: all of these types **must** be contained within `""` symbols.
 
 ### question
 `question` is a boolean, that means it can be either `true` or `false`.
