@@ -16,6 +16,7 @@ In **UselessLang** there are a few types that can be typed to uhhh code, i guess
 ### number and longnumber
 `number` is just a normal 32 bit integer.
 <br>`longnumber` is just a normal float.
+<br>Notice: the current hour is added to every `number`, so if it's 2PM (14), the number 5 is changed to 19.
 
 ### word, longword and shortword
 `word` is a string that CAN'T contain spaces.
@@ -52,16 +53,23 @@ A variable can contain multiple words as its name
   &lt;This is my variable&gt; is 10.
 </pre>
 Be careful, every line must end with a `.` symbol.
-<br><br>Furthermore, you can force variables to avoid certain values:
+<br><br>Furthermore, you can force variables to avoid certain values.
 <pre>
   number MyVariable isn't 5.
   \\ MyVariable will never be 5, if it is, it'll either skip to 4 or 6
 </pre>
-And you can also undeclare them by `explode`ing them:
+And you can also undeclare them by `explode`ing them.
 <pre>
   number MyVariable is 5.
   explode MyVariable.
   \\ any further use of MyVariable will result in a crash
+</pre>
+You can get the value of a variable before a change with `what did var use to be`:
+<pre>
+  number MyVariable is 5.
+  MyVariable is MyVariable plus 3.
+  number Previous is what did MyVariable use to be.
+  draw Previous \\ prints 5
 </pre>
 
 ## Comments
@@ -180,6 +188,15 @@ Notice: you can only `summon` a script once, after the program is done, the file
 
 ## Compiler Status
 The **UselessLang** compiler is very sensitive, so if less than 40% of the lines of code in your program are not treating him nicely, he will get **sad**.
-<br>A sad compiler can randomly skip lines of code and not execute them.
+<br>A sad compiler can randomly skip lines of code and not execute them, out of sprite.
 <br>Also, every program must end with the phrase "I've finished writing my code, can you compile it for me please?".
 <br>Notice: you can check if the compiler is happy or not with the special `areYouHappy` keyword, if it returns true, the compiler is happy.
+
+## Bookmarks
+If you really love what you wrote, you can bookmark a line with a name and then return to it later.
+<pre>
+  bookmark line 40 as MySpot.
+  ...
+  walk to MySpot.
+</pre>
+Once you call `walk to` on a bookmark, the compiler jumps to it and recompiles everything after it.
