@@ -88,6 +88,18 @@ A function can be called by simply typing its name, followed by its arguments.
   draw result. \\ this prints 16
 </pre>
 
+## Operators
+Here are the supported operators and what they represent:
+- `plus`: `+`
+- `reverseplus`: `-`
+- `times`: `*`
+- `divideby`: `/`
+- `and`: `&&`
+- `or`: `||`
+- `is really`: `==`
+- `is not`: `!=`
+- `get the remainder of`: `%`
+
 ## Conditional statements
 Conditional statements such as `if`, `else`, `else if`, `if else` and `elf` execute any precedent line of code that has a `-` symbol before it.
 <pre>
