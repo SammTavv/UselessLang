@@ -105,4 +105,18 @@ You can also chain conditional statements like so:
 </pre>
 
 ## Loops
-**
+**UselessLang** has two types of loops: `loop` and `cycle through`.
+<br>Loops are a variation of `recipe`s as their body is the same, except you can't call or add parameters to loops, duh.
+
+### loop
+`loop` statements can either be `loop until` or `loop forever`.
+<br>`loop until` runs every frame until a condition is met.
+<pre>
+  loop until Apples is morethan 50
+  step 1: \\ do something
+  step 2: throw Apples.
+</pre>
+I probably don't even have to explain what `loop forever` does.
+
+### cycle through
+
