@@ -191,6 +191,11 @@ The **UselessLang** compiler is very sensitive, so if less than 40% of the lines
 <br>A sad compiler can randomly skip lines of code and not execute them, out of sprite.
 <br>Also, every program must end with the phrase "I've finished writing my code, can you compile it for me please?".
 <br>Notice: you can check if the compiler is happy or not with the special `areYouHappy` keyword, if it returns true, the compiler is happy.
+<br>Fun fact: you can feed data to the compiler to boost its happiness.
+<pre>
+  word MyVariable is "Nooooo".
+  sacrifice MyVariable. \\ this is the equivalent of "explode MyVariable" but also makes the compiler happy for a small amount of time
+</pre>
 
 ## Bookmarks
 If you really love what you wrote, you can bookmark a line with a name and then return to it later.
