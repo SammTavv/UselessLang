@@ -51,8 +51,9 @@ Variables can be declared like this:
   &lt;This is my variable&gt; is 10.
 </pre>
 <br>Be careful, every line must end with a `.` symbol.
-<br>Furthermore, you can also undeclare variables like this:
+<br>Furthermore, you can force variables to avoid certain values:
 <pre>
-  number MyVariable is not 5.
+  number MyVariable isn't 5.
   \\ MyNumber will never be 5, if it is, it'll either skip to 4 or 6
 </pre>
+And you can
