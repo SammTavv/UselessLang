@@ -104,17 +104,28 @@ You can also chain conditional statements like so:
   else
 </pre>
 
+## Arrays
+An array can be declared with `list of` followed by a type. Items are separated with `and`.
+<pre>
+  list of longword MyArray is #Hello# and #World# and #This is stupid#.
+</pre>
+Arrays have some handy features to help you not die inside when using them, such as:
+- `push MyVariable to MyArray` (adds an item)
+- `pull MyVariable from MyArray` (removes an item)
+- `how many items in MyArray` (returns the item count)
+- `shuffle MyArray` (reorders the items randomly)
+
 ## Loops
 **UselessLang** has two types of loops: `loop` and `cycle through`.
-<br>Loops are a variation of `recipe`s as their body is the same, except you can't call or add parameters to loops, duh.
+<br>Loops are a variation of `recipe`s as their body is the same, except you can't call or add parameters to them, duh.
 
 ### loop
 `loop` statements can either be `loop until` or `loop forever`.
 <br>`loop until` runs every frame until a condition is met.
 <pre>
   loop until Apples is morethan 50
-  step 1: \\ do something
-  step 2: throw Apples.
+  step 1: Apples is Apples plus 2.
+  step 2: throw Apples. \\ returning a value does nothing in loops by the way, it's just there because it looks cool
 </pre>
 I probably don't even have to explain what `loop forever` does.
 
