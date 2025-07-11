@@ -47,7 +47,7 @@ Variables can be declared like this:
 </pre>
 <br>Variables can also have a phrase as their name, by using angled brackets
 <pre>
-  number <This is my variable> is 5.
+  number &lt;This is my variable&gt; is 5.
 </pre>
 <br>Be careful, every line must end with a `.` symbol.
 <br>Furthermore, you can also undeclare variables like this:
