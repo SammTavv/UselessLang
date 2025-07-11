@@ -3,7 +3,7 @@ Probably the most unappetizing programming language.
 <br>Let's start this with a general overview of the *fantastic* features.
 
 ## Types
-In UselessLang there are a few types that can be typed to uhhh code, i guess.
+In **UselessLang** there are a few types that can be typed to uhhh code, i guess.
 <br>These include:
 - `number`: `int32`
 - `longnumber`: `float`
@@ -34,7 +34,7 @@ In UselessLang there are a few types that can be typed to uhhh code, i guess.
   MyVariable is number.
   MyVariable is 5.
 </pre>
-<br>Be careful though, you can't set a value to a `notset` before assigning it a type.
+Be careful though, you can't set a value to a `notset` before assigning it a type.
 <pre>
   notset MyVariable is 5.
   \\ error
@@ -45,15 +45,24 @@ Variables can be declared like this:
 <pre>
   number MyVariable is 5.
 </pre>
-<br>A variable can contain multiple words as its name
+A variable can contain multiple words as its name
 <pre>
   number &lt;This is my variable&gt; is 5.
   &lt;This is my variable&gt; is 10.
 </pre>
-<br>Be careful, every line must end with a `.` symbol.
+Be careful, every line must end with a `.` symbol.
 <br>Furthermore, you can force variables to avoid certain values:
 <pre>
   number MyVariable isn't 5.
   \\ MyNumber will never be 5, if it is, it'll either skip to 4 or 6
 </pre>
-And you can
+And you can also undeclare them by `explode`ing them:
+<pre>
+  number MyVariable is 5.
+  explode MyVariable.
+  \\ any further use of MyVariable will result in a crash
+</pre>
+
+## Comments
+As you may have seen, comments are prefixed by `\\`.
+<br>Multiline comments are awful and messy, so **UselessLang** doesn't support them.
