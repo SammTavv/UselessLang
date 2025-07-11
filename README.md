@@ -13,21 +13,21 @@ In UselessLang there are a few types that can be typed to uhhh code, i guess.
 - `question`: `bool`
 - `notset`: `null`
 
-## `number` and `longnumber`
-`number`s are just normal 32 bit integers.
-<br>`longnumber`s are just normal floats.
+## number and longnumber
+`number` is just a normal 32 bit integer.
+<br>`longnumber` is just a normal float.
 
-## `word`, `longword` and `shortword`
+## word, longword and shortword
 `word` is a string that CAN'T contain spaces.
 <br>`longword` is a string that CAN contain spaces.
 <br>`shortword` is a single character.
 
-## `question`
+## question
 `question` is a boolean, that means it can be either `true` or `false`.
 <br>If you're unsure of the answer to a `question`, you can set it to `idk`, which randomly returns `true` or `false` every time it's accessed.
 **WARNING**: `true` will be compiled to `false` and viceversa, because this is my language and i can do what i want :)
 
-## `notset`
+## notset
 `notset` is a type that is always initialized to be `null`, but you can assign it another type later on, like in this example:
 <pre>
   notset MyVariable.
