@@ -21,12 +21,12 @@ In **UselessLang** there are a few types that can be typed to uhhh code, i guess
 `word` is a string that CAN'T contain spaces.
 <br>`longword` is a string that CAN contain spaces.
 <br>`shortword` is a single character.
-<br>Notice: all of these types **must** be contained within `""` symbols.
+<br>Notice: all of these types **must** be contained within `# #` symbols.
 
 ### question
 `question` is a boolean, that means it can be either `true` or `false`.
 <br>If you're unsure of the answer to a `question`, you can set it to `idk`, which randomly returns `true` or `false` every time it's accessed.
-**WARNING**: `true` will be compiled to `false` and viceversa, because this is my language and i can do what i want :)
+<br>Notice: `true` will be compiled to `false` and viceversa, because this is my language and i can do what i want :)
 
 ### notset
 `notset` is a type that is always initialized to be `null`, but you can assign it another type later on, like in this example:
@@ -86,4 +86,20 @@ A function can be called by simply typing its name, followed by its arguments.
 <pre>
   number result is Sum 5 and 4 and 7.
   draw result. \\ this prints 16
+</pre>
+
+## Conditional statements
+Conditional statements such as `if`, `else`, `else if`, `if else` and `elf` execute any precedent line of code that has a `-` symbol before it.
+<pre>
+  -draw #Hello#.
+  if (MyVariable is lessthan 10)
+</pre>
+You can also chain conditional statements like so:
+<pre>
+  -draw #Hello#.
+  -SomeFunction.
+  if (Time is 50)
+  -draw #I hate you#.
+  -SomeFunction
+  else
 </pre>
