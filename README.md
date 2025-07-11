@@ -34,8 +34,24 @@ In UselessLang there are a few types that can be typed to uhhh code, i guess.
   MyVariable is number.
   MyVariable is 5.
 </pre>
-<br>Be careful though, you can't set a value to a `notset` before assigning it a type
+<br>Be careful though, you can't set a value to a `notset` before assigning it a type.
 <pre>
   notset MyVariable is 5.
   \\ error
+</pre>
+
+## Variables
+Variables can be declared like this:
+<pre>
+  number MyVariable is 5.
+</pre>
+<br>You can also name them as a phrase by using angled brackets.
+<pre>
+  number <This is my variable> is 5.
+</pre>
+<br>Be careful, every line must end with a `.` symbol.
+<br>Furthermore, you can also undeclare variables like this:
+<pre>
+  number MyVariable is not 5.
+  \\ MyNumber will never be 5, if it is, it'll either skip to 4 or 6
 </pre>
