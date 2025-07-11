@@ -5,13 +5,13 @@ Probably the most unappetizing programming language.
 ## Types
 In **UselessLang** there are a few types that can be typed to uhhh code, i guess.
 <br>These include:
-- `number`: `int32`
-- `longnumber`: `float`
-- `word`: `string` (without spaces)
-- `longword`: `string` (with spaces)
-- `shortword`: `char`
-- `question`: `bool`
-- `notset`: `null`
+- `number`
+- `longnumber`
+- `word`
+- `longword`
+- `shortword`
+- `question`
+- `notset`
 
 ### number and longnumber
 `number` is just a normal 32 bit integer.
@@ -66,3 +66,23 @@ And you can also undeclare them by `explode`ing them:
 ## Comments
 As you may have seen, comments are prefixed by `\\`.
 <br>Multiline comments are awful and messy, so **UselessLang** doesn't support them.
+
+## Functions
+Functions can be created with the `recipe` keyword. The body of a `recipe` is defined by its steps, check out this example:
+<pre>
+  recipe MyFunction
+  step 1: number MyVariable is 5.
+  step 2: throw MyVariable.
+</pre>
+Functions **must** `throw` (return) a type, even if it's not used or doesn't serve any purpose.
+<br>The arguments of a `recipe` can be declared with the `contains` keyword and must be separated by `and`. Not required arguments can be expressed with `maybe`.
+<pre>
+  recipe Sum contains number num1 and number num2 and maybe number num3
+  step 1: number result is num1 plus num2 plus num3.
+  step 2: throw result.
+</pre>
+A function can be called by simply typing its name, followed by its arguments.
+<pre>
+  number result is Sum 5 and 4 and 7.
+  draw result. \\ this prints 16
+</pre>
