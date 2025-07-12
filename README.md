@@ -274,7 +274,7 @@ Here are some functions you can use anywhere and everywhere:
 - `ask`: gets a string containing the input from the user.
 <pre>
   number Result.
-  ask Result. \\ this tries to auto-convert the input to type "number"
+  Result is ask. \\ this tries to auto-convert the input to type "number"
 </pre>
 - `sculpt`: writes a string to a file.
 <pre>
@@ -283,7 +283,7 @@ Here are some functions you can use anywhere and everywhere:
 - `observe`: reads the content of a file (returns a "list of longword").
 <pre>
   list of longword Content.
-  observe Content #Path/To/File.txt#.
+  Content is observe #Path/To/File.txt#.
 </pre>
 - `doesitwork`: calls a `recipe` if there are no errors
 <pre>
