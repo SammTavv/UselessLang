@@ -297,7 +297,7 @@ Here are some functions you can use anywhere and everywhere:
   draw CoolerWord. \\ returns "Ciao"
 </pre>
 
-## Alright we're done
+# Alright we're done
 These were the main features of **UselessLang**, hope you like them because i don't.
 <br>*Compiler coming soon...*
-<br><br><br>Also this shit took me 5 hours.
+<br><br><br><br>Also this shit took me 5 hours i'm dying inside.
