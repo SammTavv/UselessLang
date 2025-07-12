@@ -20,7 +20,7 @@ In **UselessLang** there are a few types that can be typed to uhhh code, i guess
 
 ### word, longword and shortword
 `word` is a string that CAN'T contain spaces.
-<br>`longword` is a string that CAN contain spaces.
+<br>`longword` is a string that CAN contain spaces but is restricted to one single line.
 <br>`shortword` is a single character.
 <br>Notice: all of the string types **must** be contained within `# #` symbols.
 
@@ -189,7 +189,7 @@ Notice: you can only `summon` a script once, after the program is done, the file
 
 ## Compiler Status
 The **UselessLang** compiler is very sensitive, so if less than 40% of the lines of code in your program are not treating him nicely, he will get **sad**.
-<br>A sad compiler can randomly skip lines of code and not execute them, out of sprite.
+<br>A sad compiler can randomly skip lines of code and not execute them, out of spite.
 <br>Also, every program must end with the phrase "I've finished writing my code, can you compile it for me please?".
 <br>Notice: you can check if the compiler is happy or not with the special `areYouHappy` keyword, if it returns true, the compiler is happy.
 <br>Fun fact: you can feed data to the compiler to boost its happiness.
@@ -206,7 +206,21 @@ If you really love what you wrote, you can bookmark a line with a name and then 
   walk to MySpot.
 </pre>
 Once you call `walk to` on a bookmark, the compiler jumps to it and recompiles everything after it.
-<br><br>On the other hand, if you don't like what you wrote, you can edit a line of code by adding ANOTHER one. You're welcome.
+<br><br>On the other hand, if you don't like what you wrote, you can edit a line of code by adding ANOTHER one.
 <pre>
   rewrite line 40 with number MyVariable is 5.
 </pre>
+
+## Type Alchemy
+Welcome to the most obscure part of **UselessLang**: type alchemy.
+<br>I already introduced types in the first section, but what if i told you you can `mix`, `forge` and `brew` them together?
+
+### mix
+Use this keyword to mix two types together to create a `magictype`. Here's a table of all the supported mixes:
+- `number mix number`: `supernumber` (64 bit, ignores current hour modifier)
+- `number mix longnumber`: `hypernumber` (infinity or negative infinity)
+- `word mix longword`: `poem` (can have multiple lines and paragraphs)
+- `word mix number`: `dateofbirth` (mm/dd/yyyy)
+- `shortword mix question`: `paradox` (returns a random character or a random `question`)
+- `notset mix [type]`: `undefined` (always `null`)
+- `list of [type] mix list of [type]`: `soup` (contains the items from both arrays)
