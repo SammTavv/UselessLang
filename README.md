@@ -16,13 +16,13 @@ In **UselessLang** there are a few types that can be typed to uhhh code, i guess
 ### number and longnumber
 `number` is just a normal 32 bit integer.
 <br>`longnumber` is just a normal float.
-<br>Notice: the current hour is added to every `number`, so if it's 2PM (14), the number 5 is changed to 19.
+<br>Notice: the current hour is added to every `number`, so if it's 2PM (14), the number 5 will be changed to 19.
 
 ### word, longword and shortword
 `word` is a string that CAN'T contain spaces.
 <br>`longword` is a string that CAN contain spaces.
 <br>`shortword` is a single character.
-<br>Notice: all of these types **must** be contained within `# #` symbols.
+<br>Notice: all of the string types **must** be contained within `# #` symbols.
 
 ### question
 `question` is a boolean, that means it can be either `true` or `false`.
@@ -84,7 +84,8 @@ Functions can be created with the `recipe` keyword. The body of a `recipe` is de
   step 2: throw MyVariable.
 </pre>
 Functions **must** `throw` (return) a type, even if it's not used or doesn't serve any purpose.
-<br>The arguments of a `recipe` can be declared with the `contains` keyword and must be separated by `and`. Not required arguments can be expressed with `maybe`.
+<br>The arguments of a `recipe` can be declared with the `contains` keyword and must be separated by `and`.
+<br>Not required arguments can be expressed with `maybe`.
 <pre>
   recipe Sum contains number num1 and number num2 and maybe number num3
   step 1: number result is num1 plus num2 plus num3.
@@ -147,8 +148,8 @@ Arrays have some handy features to help you not die inside when using them, such
   step 1: Apples is Apples plus 2.
   step 2: throw Apples. \\ returning a value does nothing in loops by the way, it's just there because it looks cool
 </pre>
-`loop forever` runs every frame forever, even after you close the program.
-`loop never`, well, never runs.
+`loop forever` runs every frame forever, even after you close the program or shut down your pc.
+<br>`loop never`, well, never runs.
 
 ### cycle through
 `cycle through` iterates through the items of an array.
@@ -158,7 +159,7 @@ Arrays have some handy features to help you not die inside when using them, such
   step 2: draw item 2 \\ equivalent of MyArray[2].
   step 3: throw MyArray.
 </pre>
-You can use keywords like: `currentItem`, `item n`, `firstItem`, `lastItem` and `itemInTheMiddle`.
+You can use keywords like: `currentItem`, `item n`, `firstItem`, `lastItem` and `itemInTheMiddleButCloserToTheLastOne`.
 
 ## Structs and classes
 Classes are for C# low-tier noobs, here we have `house`s.
