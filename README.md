@@ -182,7 +182,7 @@ Notice: anything inside of a `house` can be accessed anywhere, so no more `publi
 ## Imports
 You can import stuff by calling `summon` on the path to a `.usl` script and freely use any of its variable and function.
 <pre>
-  summon "Path/To/script.usl".
+  summon "Path/To/Script.usl".
   number MyVariable is Sqrt 25.
 </pre>
 Notice: you can only `summon` a script once, after the program is done, the file of the script gets permanently deleted.
@@ -264,3 +264,39 @@ Use this keyword to create arrays of different types, it's called like a `recipe
   step 2: throw SpecialSoup.
   \\ this would print "1", "Hello", "2", "World"
 </pre>
+
+## Global functions
+Here are some functions you can use anywhere, everywhere, whenever you want:
+- `draw`: prints any type as a string to the console.
+<pre>
+  draw #Hello World#.
+</pre>
+- `ask`: gets a string containing the input from the user.
+<pre>
+  number Result.
+  ask Result. \\ this tries to auto-convert the input to type "number"
+</pre>
+- `sculpt`: writes a string to a file.
+<pre>
+  sculpt #Hello World# #Path/To/File.txt#.
+</pre>
+- `observe`: reads the content of a file (returns a "list of longword").
+<pre>
+  list of longword Content.
+  observe Content #Path/To/File.txt#.
+</pre>
+- `doesitwork`: calls a `recipe` if there are no errors
+<pre>
+  doesitwork MyFunction.
+</pre>
+- `translate`: translates a string to italian, yes, only to italian.
+<pre>
+  word CoolWord is #Hello#.
+  word CoolerWord is translate CoolWord.
+  draw CoolerWord. \\ returns "Ciao"
+</pre>
+
+## Alright we're done
+These were the main features of **UselessLang**, hope you like them because i don't.
+<br>*Compiler coming soon...*
+<br><br><br>Also this shit took me 5 hours.
