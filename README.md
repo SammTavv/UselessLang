@@ -106,7 +106,7 @@ Here are the supported operators and what they represent:
 - `or`: `||`
 - `is really`: `==`
 - `is not`: `!=`
-- `get the remainder of`: `%`
+- `balls`: `%`
 
 ## Conditional statements
 Conditional statements such as `if`, `else`, `else if`, `if else` and `elf` execute any precedent line of code that has a `-` symbol before it.
