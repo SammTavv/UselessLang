@@ -64,7 +64,7 @@ And you can also undeclare them by `explode`ing them.
   explode MyVariable.
   \\ any further use of MyVariable will result in a crash
 </pre>
-You can get the value of a variable before a change with `what did var use to be`:
+You can get the value of a variable before a change with `what did [variable] use to be`:
 <pre>
   number MyVariable is 5.
   MyVariable is MyVariable plus 3.
@@ -226,7 +226,7 @@ Use this keyword to mix two types together and unlock a `magictype`.
 - `longword mix shortword`: `insult` (a random insult to the user)
 - `question mix word`: `answer` (a random trivia fact)
 - `shortword mix question`: `paradox` (a random character or a random `question`)
-- `notset mix [typeA]`: `undefined` (always `null`)
+- `notset mix [type]`: `undefined` (always `null`)
 - `notset mix notset`: `energy` (charges your pc by 1% on every access)
 - `list mix list`: `soup` (you can brew soups, explained in a later section)
 To assign a `magictype` to a variable, first unlock it by `mix`ing two types, then assign it normally.
@@ -300,4 +300,4 @@ Here are some functions you can use anywhere and everywhere:
 # Alright we're done
 These were the main features of **UselessLang**, hope you like them because i don't.
 <br>*Compiler coming soon...*
-<br><br><br><br>Also this shit took me 5 hours i'm dying inside.
+<br><br><br><br><br>Also this shit took me 5 hours i'm going insane.
