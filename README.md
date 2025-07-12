@@ -266,7 +266,7 @@ Use this keyword to create arrays of different types, it's called like a `recipe
 </pre>
 
 ## Global functions
-Here are some functions you can use anywhere, everywhere, whenever you want:
+Here are some functions you can use anywhere and everywhere:
 - `draw`: prints any type as a string to the console.
 <pre>
   draw #Hello World#.
