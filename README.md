@@ -285,9 +285,10 @@ Here are some functions you can use anywhere and everywhere:
   list of longword Content.
   Content is observe #Path/To/File.txt#.
 </pre>
-- `doesitwork`: calls a `recipe` if there are no errors
+- `doesitwork`: compiles a line if there are no errors
 <pre>
   doesitwork MyFunction.
+  doesitwork 5 plus #Hello#. \\ skips this line as it would throw an error
 </pre>
 - `translate`: translates a string to italian, yes, only to italian.
 <pre>
