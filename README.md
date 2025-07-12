@@ -171,7 +171,7 @@ Classes are for C# low-tier noobs, here we have `house`s.
   recipe Window
   step 1: throw Door.
 </pre>
-Data from a `house` can be accessed with `from`, like the following example:
+Data from a `house` can be accessed with `from`, like in the following example:
 <pre>
   draw Door from MyHouse.
   draw Carpet from AnotherHouse.
@@ -206,7 +206,7 @@ If you really love what you wrote, you can bookmark a line with a name and then 
   walk to MySpot.
 </pre>
 Once you call `walk to` on a bookmark, the compiler jumps to it and recompiles everything after it.
-<br><br>On the other hand, if you don't like what you wrote, you can edit a line of code by adding ANOTHER one.
+<br><br>On the other hand, if you don't like what you wrote, you can permanently change a line of code by adding ANOTHER one.
 <pre>
   rewrite line 40 with number MyVariable is 5.
 </pre>
@@ -214,13 +214,53 @@ Once you call `walk to` on a bookmark, the compiler jumps to it and recompiles e
 ## Type Alchemy
 Welcome to the most obscure part of **UselessLang**: type alchemy.
 <br>I already introduced types in the first section, but what if i told you you can `mix`, `forge` and `brew` them together?
+Notice: all of these keywords drain a bit of happiness from the compiler when used.
 
 ### mix
-Use this keyword to mix two types together to create a `magictype`. Here's a table of all the supported mixes:
+Use this keyword to mix two types together and unlock a `magictype`.
+<br>Here's a list of all the supported mixes:
 - `number mix number`: `supernumber` (64 bit, ignores current hour modifier)
-- `number mix longnumber`: `hypernumber` (infinity or negative infinity)
+- `longnumber mix longnumber`: `hypernumber` (infinity or negative infinity)
 - `word mix longword`: `poem` (can have multiple lines and paragraphs)
 - `word mix number`: `dateofbirth` (mm/dd/yyyy)
-- `shortword mix question`: `paradox` (returns a random character or a random `question`)
-- `notset mix [type]`: `undefined` (always `null`)
-- `list of [type] mix list of [type]`: `soup` (contains the items from both arrays)
+- `longword mix shortword`: `insult` (a random insult to the user)
+- `question mix word`: `answer` (a random trivia fact)
+- `shortword mix question`: `paradox` (a random character or a random `question`)
+- `notset mix [typeA]`: `undefined` (always `null`)
+- `notset mix notset`: `energy` (charges your pc by 1% on every access)
+- `list mix list`: `soup` (you can brew soups, explained in a later section)
+To assign a `magictype` to a variable, first unlock it by `mix`ing two types, then assign it normally.
+<pre>
+  number mix number.
+  supernumber MyVariable = 123456789.
+  supernumber OtherVariable = 987654321. \\ error: you need to unlock this magictype first
+</pre>
+
+### forge
+Use this keyword to mix two `magictypes` together and unlock a `supermagictype`.
+<br>Here's a list of all the supported forges:
+- `supernumber forge hypernumber`: `galacticnumber` (a number so big the program crashes)
+- `poem forge insult`: `satire` (offends politics)
+- `paradox forge answer`: `truth` (always true)
+- `undefined forge dateofbirth`: `death` (game over)
+- `energy forge soup`: `energydrink` (+100 health to the programmer)
+Assigning a `supermagictype` to a variable is the same as assigning a `magictype`.
+<pre>
+  number mix number.
+  longnumber mix longnumber.
+  hypernumber MyVariable = 99999 times 99999.
+</pre>
+
+### brew
+Use this keyword to create arrays of different types, it's called like a `recipe` and accepts 2 to 5 `soup`s.
+<pre>
+  list of number Numbers is 10 and 15.
+  list of word Words is "Hello" and "World".
+  list mix list \\ unlock soup
+  brew Numbers and Words into SpecialSoup. \\ SpecialSoup is a type "soup" that acts like a "list of" but with mixed types
+
+  cycle through SpecialSoup
+  step 1: draw currentItem.
+  step 2: throw SpecialSoup.
+  \\ this would print "10, Hello, 15, World"
+</pre>
