@@ -252,7 +252,7 @@ Assigning a `supermagictype` to a variable is the same as assigning a `magictype
 </pre>
 
 ### brew
-Use this keyword to create arrays of different types, it's called like a `recipe` and accepts 2 to 5 `soup`s.
+Use this keyword to create arrays of different types, it's called like a `recipe` and accepts 2 to 5 `list oc [type]`s.
 <pre>
   list of number Numbers is 1 and 2.
   list of word Words is "Hello" and "World".
