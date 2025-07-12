@@ -254,7 +254,7 @@ Assigning a `supermagictype` to a variable is the same as assigning a `magictype
 ### brew
 Use this keyword to create arrays of different types, it's called like a `recipe` and accepts 2 to 5 `soup`s.
 <pre>
-  list of number Numbers is 10 and 15.
+  list of number Numbers is 1 and 2.
   list of word Words is "Hello" and "World".
   list mix list \\ unlock soup
   brew Numbers and Words into SpecialSoup. \\ SpecialSoup is a type "soup" that acts like a "list of" but with mixed types
@@ -262,5 +262,5 @@ Use this keyword to create arrays of different types, it's called like a `recipe
   cycle through SpecialSoup
   step 1: draw currentItem.
   step 2: throw SpecialSoup.
-  \\ this would print "10, Hello, 15, World"
+  \\ this would print "1", "Hello", "2", "World"
 </pre>
