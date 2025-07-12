@@ -198,7 +198,7 @@ The **UselessLang** compiler is very sensitive, so if less than 40% of the lines
   sacrifice MyVariable. \\ compiler becomes happy but you can't use this variable for a while
 </pre>
 
-## Bookmarks
+## Bookmarks and rewriting
 If you really love what you wrote, you can bookmark a line with a name and then return to it later.
 <pre>
   bookmark line 40 as MySpot.
@@ -206,3 +206,7 @@ If you really love what you wrote, you can bookmark a line with a name and then 
   walk to MySpot.
 </pre>
 Once you call `walk to` on a bookmark, the compiler jumps to it and recompiles everything after it.
+<br><br>On the other hand, if you don't like what you wrote, you can edit a line of code by adding ANOTHER one. You're welcome.
+<pre>
+  rewrite line 40 with number MyVariable is 5.
+</pre>
