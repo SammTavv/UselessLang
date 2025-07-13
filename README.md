@@ -113,13 +113,13 @@ Here are the supported operators and what they represent:
 Conditional statements such as `if`, `else`, `else if`, `if else` and `elf` execute any precedent line of code that has a `-` symbol before it.
 <pre>
   -draw #Hello#.
-  if (MyVariable is lessthan 10)
+  if MyVariable is lessthan 10
 </pre>
 You can also chain conditional statements like so:
 <pre>
   -draw #Hello#.
   -SomeFunction.
-  if (Time is 50)
+  if Time is 50
   -draw #I hate you#.
   -SomeFunction
   else
